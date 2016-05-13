@@ -1,0 +1,107 @@
+<?php
+	class IndexAction extends Action{
+		public function Listen(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("listen.html");
+		}
+		public function Modal(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("modal.lockme.html");
+		}
+		public function Index(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("index.html");
+		}
+		public function Docs(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("docs.html");
+		}
+		public function Genres(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("genres.html");
+		}
+		public function Events(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("events.html");
+		}
+		public function Video(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("video.html");
+		}
+		public function Layout_color(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("layout-color.html");
+		}
+		public function Layout_boxed(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("layout-boxed.html");
+		}
+		public function Widgets(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("widgets.html");
+		}
+		public function Grid(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("grid.html");
+		}
+		public function Icons(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("icons.html");
+		}
+		public function Buttons(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("buttons.html");
+		}
+		public function layout_fluid(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("layout-fluid.html");
+		}
+		public function Components(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("components.html");
+		}
+		public function Lists(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("list.html");
+		}
+		public function Chart(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("chart.html");
+		}
+		public function Portlet(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("portlet.html");
+		}
+		public function Timeline(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("timeline.html");
+		}
+		public function Profile(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("profile.html");
+		}
+		public function Blog(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("blog.html");
+		}
+		public function error(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("404.html");
+		}
+		public function Table_datatable(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("table-datatable.html");
+		}
+		public function Track_detail(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("track-detail.html");
+		}
+		public function Jvectormap(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("jvectormap.html");
+		}
+		public function Video_Detail(){
+			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->display("video-detail.html");
+		}
+	}
