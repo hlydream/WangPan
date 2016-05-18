@@ -27,8 +27,12 @@ $js=<<<js
 	<script>
 		var url="$url";
 		function imgUrl(){
-			var image=document.getElementById("image"); 
-            image.setAttribute("src",url+screen.width+'x'+screen.height+".jpg"); 
+			var image=document.getElementById("image");
+			if(screen.width!=1680||screen.width!=1366||screen.width!=1440||screen.width!=1360||screen.width!=1920){
+				var width =1920;
+				var height=1080;
+			}
+            image.setAttribute("src",url+width+'x'+height+".jpg"); 
 		}
 	</script>
 js;
