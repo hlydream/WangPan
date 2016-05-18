@@ -19,7 +19,9 @@
 				$i++;
 			}
 			$server = $GLOBALS['config']['server']['host'];
+			$ip_new = $_SERVER["REMOTE_ADDR"];
 			$this->view->assign('username',$_SESSION['user']['m_username']);
+			$this->view->assign('ip_new',$ip_new);
 			$this->view->assign('ip',$_SESSION['user']['m_last_login_ip']);
 			$this->view->assign('time',date('Y-m-d H:i:s',$_SESSION['user']['m_last_login_time']));
 			$this->view->assign('zzurl',$server);

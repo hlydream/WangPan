@@ -21,7 +21,7 @@
 <title>文件管理</title>
 </head>
 <body>
-<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i>齐齐网盘1.2  当前用户：~$username~~ 上次登录IP：~$ip~~ 上次登录时间：~$time~~<a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe640;</i></a></nav>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i>齐齐网盘1.4  当前用户：~$username~~ 本次登录IP：~$ip_new~~ 上次登录IP：~$ip~~ 上次登录时间：~$time~~<a class="btn btn-success radius r mr-20" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe640;</i></a></nav>
 <div class="pd-20">
 	<div class="text-c"> 日期范围：
 		<input type="text" onfocus="WdatePicker({maxDate:'#F{$dp.$D(\'datemax\')||\'%y-%M-%d\'}'})" id="datemin" class="input-text Wdate" style="width:120px;">
@@ -57,7 +57,17 @@
 				<td>~$list['m_size']~~</td>
 				<!--<td>admin@mail.com</td>-->			
 				<td>~$list['m_time']~~</td>
-				<td class="text-l">~$list['m_key']~~</td>
+				<td class="text-l">
+					~if $list['m_type']=='mp3'~~
+					<a href="~$zzurl~~files/mp3view/keys/~$list['m_key']~~" target="_blank">~$list['m_key']~~</a>
+					~elseif $list['m_type']=='mp4'||$list['m_type']=='mkv'~~
+					<a href="~$zzurl~~files/videoview/keys/~$list['m_key']~~" target="_blank">~$list['m_key']~~</a>
+					~elseif $list['m_type']=='jpg'||$list['m_type']=='jpeg'~~
+					<a href="~$zzurl~~files/picview/keys/~$list['m_key']~~" target="_blank">~$list['m_key']~~</a>
+					~else~~
+					<a href="~$zzurl~~files/documentview/keys/~$list['m_key']~~" target="_blank">~$list['m_key']~~</a>
+					~/if~~
+				</td>
 				<td class="td-status"><span class="label label-~if $list['del']==0~~danger~else~~success~/if~~ radius">~if $list['del']==0~~已删除~else~~可获得~/if~~</span></td>
 				<td class="td-manage"><a title="删除" href="javascript:;" onclick="file_del(this,'1')" class="ml-5" style="text-decoration:none"><i class="Hui-iconfont">&#xe6e2;</i></a></td>
 			</tr>

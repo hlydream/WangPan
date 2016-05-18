@@ -16,7 +16,7 @@
 				echo "文件不存在或者已被删除";exit;
 			}
 			$server = $GLOBALS['config']['server']['host'];
-			$this->view->assign("tit",$picinfo['m_old_name']); 
+			$this->view->assign("title",$picinfo['m_old_name']); 
 			$this->view->assign("filename",$picinfo['m_new_name']); //文件名
 			$this->view->assign("fileurl",$server.$picinfo['m_path']); //外链URL
 			$this->view->assign("head",$picinfo['m_old_name']); 
@@ -41,7 +41,7 @@
 				echo "文件不存在或者已被删除";exit;
 			}
 			$server = $GLOBALS['config']['server']['host'];
-			$this->view->assign("tit",$videoinfo['m_old_name']); 
+			$this->view->assign("title",$videoinfo['m_old_name']); 
 			$this->view->assign("filename",$videoinfo['m_new_name']); //文件名
 			$this->view->assign("fileurl",$server.$videoinfo['m_path']); //外链URL
 			$this->view->assign("head",$videoinfo['m_old_name']); 
@@ -66,7 +66,7 @@
 				echo "文件不存在或者已被删除";exit;
 			}
 			$server = $GLOBALS['config']['server']['host'];
-			$this->view->assign("tit",$mp3info['m_old_name']); 
+			$this->view->assign("title",$mp3info['m_old_name']); 
 			$this->view->assign("filename",$mp3info['m_new_name']); //文件名
 			$this->view->assign("fileurl",$server.$mp3info['m_path']); //外链URL
 			$this->view->assign("head",$mp3info['m_old_name']); 
@@ -89,7 +89,7 @@
 			$doc = new FilesModel();
 			$docinfo = $doc->GetDocumentInfo($key);
 			$server = $GLOBALS['config']['server']['host'];
-			$this->view->assign("tit",$docinfo['m_old_name']); 
+			$this->view->assign("title",$docinfo['m_old_name']); 
 			$this->view->assign("filename",$docinfo['m_new_name']); //文件名
 			$this->view->assign("fileurl",$server.$docinfo['m_path']); //外链URL
 			$this->view->assign("head",$docinfo['m_old_name']); 
