@@ -222,6 +222,7 @@
 			 *2.判断格式为 扩展名字 扩展文件
 			 *3.如果存在就包含非类php文件
 			*/
+			$ac = strtolower($ac);
 			if(is_file(LIB_DIR."/$lib/$lib.php")){
 				include_once LIB_DIR."/$lib/$lib.php";
 				return true;
@@ -230,6 +231,10 @@
 					include_once LIB_DIR."/$lib/$ac.php";
 					return true;
 				}else{
+						if(is_file(LIB_DIR."/$lib/$ac.html")){
+							include_once LIB_DIR."/$lib/$ac.html";
+							return true;
+						}
 					return false;
 				}
 			}
